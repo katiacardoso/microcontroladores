@@ -1,0 +1,23 @@
+[PROJECT]
+Target=blink.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.007
+Compiler=PCM
+CCSVersion=5.007
+[Target Data]
+FileList=blink.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\
+[C:\Users\ktcar\Documents\CCS C Projects\blink\blink]
+Type=4
+[mru-list]
+1=blink.c
+[Opened Files]
+1=blink.c
+2=blink.h
+3=
+[blink.c]
+Type=4
+[Units]
+Count=1
+1=blink (main)
