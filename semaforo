@@ -1,1 +1,62 @@
+#include <16F84A.h>
+
+#FUSES NOWDT                    //No Watch Dog Timer
+
+#use delay(crystal=4000000)
+
+#define GREEN PIN_B7
+#define YELLOW PIN_B6
+#define RED PIN_B5
+
+#define GREEN_PED PIN_B1
+#define RED_PED PIN_B0
+
+#define BUTTON_L PIN_A1
+#define BUTTON_R PIN_A2
+
+
+void main()
+{
+
+  while(true){
+
+  output_high(GREEN);
+
+  if(input(BUTTON_L) == 1 && input(BUTTON_R) == 1){
+
+     output_high(RED_PED);
+
+  }else{
+
+           delay_ms(10000);
+           output_low(GREEN);
+           output_high(YELLOW);
+           delay_ms(2000);
+           output_low(YELLOW);
+           output_high(RED);
+           delay_ms(1000);
+           output_low(RED_PED);
+           output_high(GREEN_PED);
+           delay_ms(10000);
+
+           for(char i=0; i<5; i++){
+
+              output_high(GREEN_PED);
+              delay_ms(500);
+
+              output_low(GREEN_PED);
+              delay_ms(500);
+
+           }
+
+       }
+
+       output_high(RED_PED);
+       delay_ms(1000);
+       output_high(GREEN);
+       output_low(RED);
+
+  }
+
+}
 
